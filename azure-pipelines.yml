@@ -14,10 +14,9 @@ variables:
 
 steps:
 - task: DotNetCoreCLI@2
-  displayName: Restore
   inputs:
-    command: restore
-    projects: '$(Parameters.RestoreBuildProjects)'
+    command: 'restore'
+    feedsToUse: 'select'
 - task: DotNetCoreCLI@2
   displayName: Build
   inputs:
